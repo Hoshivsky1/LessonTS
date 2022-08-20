@@ -30,3 +30,16 @@ function logMlt(a:string | number, b:string | boolean) {
 }
 
 //!Literal Types===============================================
+function fetchWithAuth(url: string, method: 'post' | 'get'): 1 | -1{
+    return 1;
+}
+
+fetchWithAuth('s', 'post');
+
+let a: 'fwefwefwe'  = 'fwefwefwe';
+
+let method = 'post';
+//* або  const method = 'post';
+fetchWithAuth('s', method as 'post');
+
+//!Type Aliases
