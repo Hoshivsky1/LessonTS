@@ -164,3 +164,41 @@ const us: Us = {
 type ID = string | number;
 
 //!Optional =========================================================
+interface User0 {
+    login: string;
+    password?: string;
+}
+
+const user0: User0 = {
+    login: 'a@fff',
+    // password: '1'
+}
+
+function mult(first: number, second?: number): number {
+    if(!second) {
+        return first * first;
+    }
+    return first * second;
+}
+
+mult(5);
+
+interface UserPro {
+    login: string;
+    password?: {
+        type: 'primary' | 'secondary';
+    }
+}
+
+function testPas (user: UserPro) {
+    const t = user.password?.type;
+    const t1 = user.password ? user.password.type : undefined;
+}
+
+function test(param?: string) {
+    const t = param ?? mult(5);
+} 
+
+//!Void===============================================================
+
+
