@@ -142,3 +142,12 @@ type UserD2 = {
 }
     //*Альтернативне використання 
 type ud2 = Record<number, Userr> 
+
+//!Type or Interfaces =============================================
+interface Us {
+    name: string,
+}
+
+interface Us {
+    age: number
+}
