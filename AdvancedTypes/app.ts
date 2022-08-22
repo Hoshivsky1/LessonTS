@@ -143,7 +143,9 @@ type UserD2 = {
     //*Альтернативне використання 
 type ud2 = Record<number, Userr> 
 
-//!Type or Interfaces =============================================
+//!Type vs Interfaces =============================================
+//*Що краще в Interfaces
+    //?1type так робити не може 
 interface Us {
     name: string,
 }
@@ -151,3 +153,14 @@ interface Us {
 interface Us {
     age: number
 }
+
+const us: Us = {
+    name: 'max',
+    age: 33
+}
+
+//*Що краще в Type
+    //?1 Interfaces так не може
+type ID = string | number;
+
+//!Optional =========================================================
