@@ -102,3 +102,43 @@ let user3: UserWithRole2 = {
 };
 
 //!Iterfaces=================================================
+interface Userr  {
+    name: string,
+    age: number,
+    skills: string[]
+    
+    log: (id: number) => string;
+} 
+
+interface Rolee {
+    roleId:number,
+}
+
+interface UserWithRolee extends Userr {
+    roleId: number,
+}
+
+interface UserWithRoleee extends Userr,Rolee {
+    createDate: Date,
+}
+
+let userr: UserWithRoleee = {
+    name: 'Maxim',
+    age: 18,
+    skills: ['1', '2'],
+    roleId: 12,
+    createDate: new Date(),
+    log(id){
+        return '';
+    }
+};
+
+interface UserD {
+    [index: number]: Userr
+}
+
+type UserD2 = {
+    [index: number]: Userr
+}
+    //*Альтернативне використання 
+type ud2 = Record<number, Userr> 
